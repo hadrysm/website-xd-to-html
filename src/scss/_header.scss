@@ -1,0 +1,124 @@
+.header {
+    @include position(fixed, 0, auto, auto, 0);
+    width: 100%;
+    min-height: 10vh;
+    padding: 1rem 2rem;
+    @include flex(space-between);
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+
+    @include media(medium) {
+        padding: 1rem 2rem;
+    }
+
+    &--scroll {
+        background-color: $color-primary;
+    }
+}
+
+.menu {
+    @include position(fixed, 0, -80%, auto, auto);
+    height: 100vh;
+    width: 70%;
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 40%;
+    background-color: $color-primary;
+    box-shadow: 0px 2px 10px 0px rgba(darken($color-primary, 40%), 0.7);
+    transition: transform 0.5s cubic-bezier(0.85, 0, 0.15, 1);
+
+    @media screen and (min-width: 320px) and (orientation: landscape) {
+        @include position(fixed, 0, -50%, auto, auto);
+        width: 50%;
+    }
+
+    @include media(medium) {
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+    }
+
+    &__list {
+        @include flex(space-around, center, column);
+        height: 100%;
+        z-index: 10;
+
+        @include media(medium) {
+            @include flex(space-around, center, row);
+        }
+    }
+
+    &__item {
+        opacity: 0;
+
+        @include media(medium) {
+            opacity: 1;
+            margin-right: 2rem;
+        }
+    }
+
+    &__link {
+        display: block;
+        @include font-style($font-primary, 1.6rem, 600, 2rem, $color-link);
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 0.1rem;
+            background-color: $color-white;
+            transform: scale(0);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        &:hover:after {
+            transform: scale(1);
+        }
+    }
+
+    &-active {
+        transform: translateX(-100%);
+    }
+}
+
+.burger {
+    padding: 0.5rem;
+    cursor: pointer;
+
+    @include media(medium) {
+        display: none;
+    }
+
+    &__line {
+        position: relative;
+        display: block;
+        padding: 0.2rem 1.7rem;
+        margin: 0.5rem 0;
+        border-radius: 10px;
+        background-color: $color-link;
+        z-index: 999;
+        transition: all 0.3s;
+    }
+
+    &-active {
+        .burger__line-1 {
+            transform: rotate(45deg) translateY(300%);
+        }
+
+        .burger__line-2 {
+            opacity: 0;
+        }
+
+        .burger__line-3 {
+            transform: rotate(-45deg) translateY(-300%);
+        }
+    }
+}

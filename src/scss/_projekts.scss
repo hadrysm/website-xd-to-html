@@ -1,0 +1,66 @@
+.projekt {
+    min-height: 40vh;
+    @include flex(space-between, center, row);
+    flex-wrap: wrap;
+    background-color: $color-white;
+
+    &__text {
+        opacity: 0;
+        flex: 1 1 30rem;
+        padding: 3rem 2rem;
+        @include flex(center, flex-start, column);
+
+        @include media(medium) {
+            padding: 3rem 5rem;
+        }
+    }
+
+    &__title {
+        @include media(large) {
+            font-size: 3.2rem;
+        }
+    }
+
+    &__description {
+        color: $color-grey;
+    }
+
+    &__picture {
+        opacity: 0;
+        flex: 1 1 50rem;
+        padding: 3rem 2rem;
+        overflow: hidden;
+
+        @include media(medium) {
+            padding: 3rem 5rem;
+            flex: 1 1 30rem;
+        }
+
+        &--order {
+            @include media(medium) {
+                order: -1;
+            }
+        }
+    }
+
+    &__img {
+        max-width: 100%;
+        border-radius: 10%;
+    }
+}
+
+.projects {
+    min-height: 100vh;
+    @include flex(space-between, center, column);
+
+    &__title-wrapper {
+        width: 70%;
+        padding: 10rem 3rem;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-weight: 300;
+    }
+}

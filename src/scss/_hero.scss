@@ -1,0 +1,38 @@
+.hero {
+    background: url('../images/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    &__container {
+        width: 100%;
+        min-height: 100vh;
+        padding-top: 3rem;
+        background-color: rgba($color-secondary, 0.22);
+        @include flex(center, center, column);
+    }
+
+    &__title {
+        text-transform: uppercase;
+
+        @include media(large) {
+            font-size: 7rem;
+        }
+
+        @include media(xlarge) {
+            font-size: 10rem;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        padding: 0 3rem;
+        color: $color-white;
+        text-shadow: 2px 2px 6px rgba($color-dark, 0.6);
+
+        @include media(large) {
+            font-size: 2.3rem;
+        }
+    }
+}

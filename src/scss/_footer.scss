@@ -1,0 +1,10 @@
+.footer {
+    min-height: 10vh;
+    padding: 2rem 0;
+    @include flex();
+    background-color: $color-primary;
+
+    &__description {
+        color: $color-white;
+    }
+}

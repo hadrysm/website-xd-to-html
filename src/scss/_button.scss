@@ -1,0 +1,19 @@
+.button {
+    padding: 2rem 4rem;
+    @include font-style($font-secondary, 1.4rem, 700, 1.7rem, $color-white);
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    border: none;
+    background-color: $color-primary;
+    border-radius: 3.6rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+        background-color: lighten($color-primary, 5%);
+    }
+
+    &--hero {
+        margin: 3rem 0 6rem 0;
+    }
+}
