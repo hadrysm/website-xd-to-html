@@ -15,6 +15,9 @@
         "type": "git",
         "url": "https://github.com/hadrysm/website-xd-to-html"
     },
+    "directories": {
+        "doc": "docs"
+    },
     "bugs": {
         "url": "https://github.com/hadrysm/website-xd-to-html/issues",
         "email": "m.hadrys.95@gmail.com"
