@@ -2,7 +2,7 @@
 
 Fully responsive XD to HTMl/CSS/JS website
 
--   Live: [website](https://hadrysm.github.io/website-xd-to-html/)
+-   Live: [website](first-page-hadrysm.netlify.app/)
 
 ## Getting Started
 
