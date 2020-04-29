@@ -2,7 +2,7 @@
 
 Fully responsive XD to HTMl/CSS/JS website
 
--   Live: [website](first-page-hadrysm.netlify.app/)
+-   Live: [website](first-page-hadrysm.netlify.app)
 
 ## Getting Started
 
