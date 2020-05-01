@@ -3,8 +3,8 @@ $color-white: #ffffff;
 $color-dark: #202124;
 $color-grey: #4f525a;
 $color-background: #fafafa;
-$color-primary: #325dff;
-$color-secondary: #0000fd;
+$color-primary: #f38f3d;
+$color-secondary: #e76f51;
 $color-border: #cecece;
 $color-link: #d9f0ff;
 //Fonts
@@ -18,22 +18,22 @@ $max-width: 1200px;
 
 //media
 $breakpoints: (
-    xsmall: (
-        min-width: 460px
-    ),
-    small: (
-        min-width: 640px
-    ),
-    medium: (
-        min-width: 768px
-    ),
-    large: (
-        min-width: 1024px
-    ),
-    xlarge: (
-        min-width: 1200px
-    ),
-    xxlarge: (
-        min-width: 1440px
-    )
+  xsmall: (
+    min-width: 460px,
+  ),
+  small: (
+    min-width: 640px,
+  ),
+  medium: (
+    min-width: 768px,
+  ),
+  large: (
+    min-width: 1024px,
+  ),
+  xlarge: (
+    min-width: 1200px,
+  ),
+  xxlarge: (
+    min-width: 1440px,
+  ),
 );
